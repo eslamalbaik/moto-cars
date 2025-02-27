@@ -42,6 +42,7 @@ const products = {
 
 export function ModelRange() {
   const [activeCategory, setActiveCategory] = React.useState("E-MOTO");
+  //@ts-ignore
   const swiperRef = React.useRef<SwiperType>();
 
   return (

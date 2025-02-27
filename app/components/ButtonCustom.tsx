@@ -52,6 +52,7 @@ const SkewedButton = React.forwardRef<HTMLButtonElement, SkewedButtonProps>(
       : "";
 
     return (
+      // @ts-ignore
       <Comp
         className={cn(buttonVariants({ variant, size, skew, className }))}
         ref={ref as any}
