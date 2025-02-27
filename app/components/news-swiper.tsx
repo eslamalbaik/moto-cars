@@ -53,6 +53,7 @@ const news = [
 ];
 
 export function NewsSlider() {
+  //@ts-ignore
   const swiperRef = React.useRef<SwiperType>();
 
   return (
