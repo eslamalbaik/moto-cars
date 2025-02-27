@@ -41,6 +41,7 @@ const ambassadors = [
 ];
 
 export function BrandAmbassadors() {
+  //@ts-ignore
   const swiperRef = React.useRef<SwiperType>();
 
   return (
