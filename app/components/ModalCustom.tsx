@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { Button } from "@/components/ui/button";
 
 const categories = ["E-MOTO", "E-SCOOTER", "E-FLEET", "CHARGING SYSTEMS"];
 
@@ -85,18 +86,22 @@ export function ModelRange() {
           </div>
 
           <div className="flex gap-3">
-            <button
+            <Button
+              size={"lg"}
+              variant={"ghost"}
               onClick={() => swiperRef.current?.slidePrev()}
-              className="rounded-2xl bg-gray-100 p-3 transition-colors hover:bg-gray-200"
+              className=" bg-gray-100 p-6 transition-colors hover:bg-gray-200"
             >
-              <ChevronLeft className="h-6 w-6" />
-            </button>
-            <button
+              <ArrowLeft className="h-8 w-8" />
+            </Button>
+            <Button
+              size={"lg"}
+              variant={"ghost"}
               onClick={() => swiperRef.current?.slideNext()}
-              className="rounded-2xl bg-gray-100 p-3 transition-colors hover:bg-gray-200"
+              className=" bg-gray-100 p-6 transition-colors hover:bg-gray-200"
             >
-              <ChevronRight className="h-6 w-6" />
-            </button>
+              <ArrowRight className="h-8 w-8" />
+            </Button>
           </div>
         </div>
       </MaxWidthWrapper>

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "MyFont";
-  src: url("/fonts/Nebula-Hollow.otf") format("otf");
+  src: url("/fonts/Metropolis-Medium.otf") format("otf");
   font-style: normal;
 }
 .special {

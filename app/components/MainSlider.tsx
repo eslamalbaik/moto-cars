@@ -137,9 +137,8 @@ export function HeroSlider() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               <div className="absolute bottom-20 left-24 flex flex-col items-start justify-center px-4 text-center">
                 <h1 className="mb-8 text-2xl font-bold tracking-[0.2em] text-white sm:text-4xl">{slide.title}</h1>
-                <SkewedButton className="group font-semibold relative overflow-hidden rounded-md bg-cyan-400 px-6 py-3 text-sm  text-black transition-transform hover:scale-105">
-                  <span className="relative  z-10">{slide.cta}</span>
-                  <div className="absolute inset-0 z-0 bg-cyan-200 transition-transform duration-300 group-hover:-translate-y-full" />
+                <SkewedButton className="group font-semibold relative  special text-sm  text-black transition-transform hover:scale-105">
+                  {slide.cta}
                 </SkewedButton>
               </div>
             </div>
