@@ -33,9 +33,9 @@ export function Footer() {
     <footer className="bg-black relative mt-20 text-white">
       {/* Newsletter Section */}
       <div className="  -mt-4 ">
-        <MaxWidthWrapper className="bg-cyan-200 lg:flex-row flex-col gap-4  absolute -top-24 left-1/2 -translate-x-1/2    z-40 flex items-center justify-between">
+        <MaxWidthWrapper className="bg-cyan-200 w-full justify-between lg:flex-row flex-col gap-4  absolute -top-24 left-1/2 -translate-x-1/2    z-40 flex items-center justify-between">
           <h3 className="special text-xl font-light tracking-[0.2em] text-black">JOIN THE VMOTO NEWSLETTER</h3>
-          <div className="flex flex-col w-full items-start gap-4">
+          <div className="flex flex-col w-fit items-start gap-4">
             <div className="flex gap-2 items-center">
               <input type="email" placeholder="Email" className="rounded-md border border-gray-300 px-4 py-2" />
               <button className="rounded-md bg-black px-6 py-2 text-white">SIGN UP</button>

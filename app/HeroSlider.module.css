@@ -1,7 +1,7 @@
 /* HeroSlider.module.css */
 .heroSlider :global(.swiper-pagination) {
   position: absolute;
-  bottom: 2rem !important;
+  bottom: 0.8rem !important;
   left: 50% !important;
   transform: translateX(-50%);
   display: flex;
