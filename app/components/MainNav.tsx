@@ -123,7 +123,7 @@ export function MainNav() {
                       />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="">
+                  <DropdownMenuContent className=" !w-full">
                     <div className="w-[80%]  bg-white p-6">
                       {Object.entries(vehicleCategories).map(([category, vehicles]) => (
                         <div key={category} className="mb-8 last:mb-0">
