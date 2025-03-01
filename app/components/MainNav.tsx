@@ -124,7 +124,7 @@ export function MainNav() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="">
-                    <div className="w-[900px]  bg-white p-6">
+                    <div className="w-[80%]  bg-white p-6">
                       {Object.entries(vehicleCategories).map(([category, vehicles]) => (
                         <div key={category} className="mb-8 last:mb-0">
                           <div className="flex items-center gap-2 mb-4">
@@ -165,11 +165,9 @@ export function MainNav() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Business</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                  <ul className=" w-[400px] gap-3 p-4 md:w-[500px]  flex flex-col">
                     {business.map((item) => (
-                      <ListItem key={item.title} title={item.title} href={item.href}>
-                        {item.description}
-                      </ListItem>
+                      <ListItem key={item.title} title={item.title} href={item.href}></ListItem>
                     ))}
                   </ul>
                 </NavigationMenuContent>
@@ -177,11 +175,9 @@ export function MainNav() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Discover</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                  <ul className=" w-[400px] gap-3 p-4 md:w-[500px]  flex flex-col">
                     {discover.map((item) => (
-                      <ListItem key={item.title} title={item.title} href={item.href}>
-                        {item.description}
-                      </ListItem>
+                      <ListItem key={item.title} title={item.title} href={item.href}></ListItem>
                     ))}
                   </ul>
                 </NavigationMenuContent>
