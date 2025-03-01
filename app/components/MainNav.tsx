@@ -123,8 +123,8 @@ export function MainNav() {
                       />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className=" !w-full">
-                    <div className="w-[80%]  bg-white p-6">
+                  <DropdownMenuContent className=" !w-[80%]">
+                    <div className="w-full  bg-white p-6">
                       {Object.entries(vehicleCategories).map(([category, vehicles]) => (
                         <div key={category} className="mb-8 last:mb-0">
                           <div className="flex items-center gap-2 mb-4">
