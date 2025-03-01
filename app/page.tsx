@@ -47,7 +47,7 @@ export default function Home() {
                       </clipPath>
                     </defs>
                   </svg>
-                  <p>
+                  <p className=" text-nowrap">
                     Download The App <br />
                     Apple Store
                   </p>
@@ -62,7 +62,7 @@ export default function Home() {
                       fill="black"
                     ></path>
                   </svg>
-                  <p>
+                  <p className=" text-nowrap">
                     Download The App
                     <br />
                     Play Store
