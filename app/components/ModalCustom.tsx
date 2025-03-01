@@ -37,6 +37,7 @@ const products = {
       name: "TC MAX",
       image: "/stash.png",
     },
+    
   ],
   // Add other category products here
 };
