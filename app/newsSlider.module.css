@@ -13,8 +13,8 @@
 }
 
 .newsSlider :global(.swiper-pagination-bullet) {
-  width: 1.5rem;
-  height: 2px;
+  width: 1rem;
+  height: 1rem;
   background: #7f8081;
   opacity: 1;
   border-radius: 0;
@@ -24,4 +24,6 @@
 
 .newsSlider :global(.swiper-pagination-bullet-active) {
   background: #000000;
+  border-radius: 50%;
+  height: 3rem;
 }
