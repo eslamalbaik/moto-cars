@@ -165,7 +165,7 @@ export function MainNav() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Business</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className=" w-[400px] gap-3 p-4 md:w-[500px]  flex flex-col">
+                  <ul className=" w-fit gap-3 p-4 flex flex-col">
                     {business.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}></ListItem>
                     ))}
@@ -175,7 +175,7 @@ export function MainNav() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Discover</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className=" w-[400px] gap-3 p-4 md:w-[500px]  flex flex-col">
+                  <ul className=" w-fit gap-3 p-4 flex flex-col">
                     {discover.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}></ListItem>
                     ))}
