@@ -162,9 +162,9 @@ export function MainNav() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </NavigationMenuItem>
-              <NavigationMenuItem>
+              <NavigationMenuItem >
                 <NavigationMenuTrigger>Business</NavigationMenuTrigger>
-                <NavigationMenuContent>
+                <NavigationMenuContent >
                   <ul className=" w-fit gap-3 p-4 flex flex-col">
                     {business.map((item) => (
                       <ListItem key={item.title} title={item.title} href={item.href}></ListItem>
