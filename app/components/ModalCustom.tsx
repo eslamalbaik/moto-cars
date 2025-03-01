@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ArrowLeft, ArrowRight,  } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import "swiper/css";
 import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const categories = ["E-MOTO", "E-SCOOTER", "E-FLEET", "CHARGING SYSTEMS"];
 
@@ -37,7 +38,6 @@ const products = {
       name: "TC MAX",
       image: "/stash.png",
     },
-    
   ],
   // Add other category products here
 };
@@ -107,8 +107,8 @@ export function ModelRange() {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper noPadding className="relative flex flex-col items-end">
-        <div className="relative max-w-full lg:max-w-[77rem] overflow-hidden">
+      <div  className="relative flex flex-col overflow-hidden items-end">
+        <div className="relative max-w-full   lg:mr-[-9rem] overflow-hidden">
           <Swiper
             modules={[Navigation, Autoplay]}
             onBeforeInit={(swiper) => {
@@ -127,28 +127,34 @@ export function ModelRange() {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3.4,
               },
             }}
             className="!overflow-visible"
           >
             {products[activeCategory as keyof typeof products]?.map((product, i) => (
               <SwiperSlide key={i}>
-                <div className="group relative">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={product.image || "/placeholder.svg"}
+                <div className="group flex flex-col items-center relative">
+                  <div className=" w-full relative aspect-[3/2] lg:h-56 lg:aspect-square overflow-hidden">
+                    <Image
+                      fill
+                      src={"/stash.png"}
                       alt={product.name}
                       className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="mt-4 text-center font-mono tracking-[0.2em]">{product.name}</h3>
+                  <h3
+                    className="mt-4 relative group-hover:before:bg-cyan-200 before:bottom-0 before:h-[3px] before:absolute
+                    before:w-full w-fit duration-200 text-center before:duration-200 text-center font-mono tracking-[0.2em]"
+                  >
+                    {product.name}
+                  </h3>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-      </MaxWidthWrapper>
+      </div>
     </section>
   );
 }

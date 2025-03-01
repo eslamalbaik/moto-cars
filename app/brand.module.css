@@ -10,15 +10,19 @@
 }
 
 .brandambassadors :global(.swiper-pagination-bullet) {
-  width: 1.5rem;
-  height: 2px;
-  background: #d1d5db;
+  width: 10px;
+  height: 10px;
+  background: gray;
   opacity: 1;
-  border-radius: 0;
   margin: 0 !important;
   transition: all 0.3s ease;
+  border: 2px solid gray !important;
 }
 
 .brandambassadors :global(.swiper-pagination-bullet-active) {
-  background: #000000;
+  background: #333;
+  height: 8px;
+  border-radius: 5px !important;
+  width: 35px;
+  border: 2px solid gray !important;
 }

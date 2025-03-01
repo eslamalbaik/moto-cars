@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import { SkewedButton } from "./ButtonCustom";
 import styles from "../brand.module.css"; // Import as a module
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 const ambassadors = [
   {
     name: "DARIO MARCHETTI",
@@ -52,26 +53,6 @@ export function BrandAmbassadors() {
           <h2 className="specail mb-2 w-fit border-b border-input text-base font-light tracking-[0.2em]">
             BRAND AMBASSADORS
           </h2>
-          <div className="my-5 flex gap-3">
-            <div className="flex gap-3">
-              <Button
-                size={"lg"}
-                variant={"ghost"}
-                onClick={() => swiperRef.current?.slidePrev()}
-                className=" bg-gray-100 p-6 transition-colors hover:bg-gray-200"
-              >
-                <ArrowLeft className="h-8 w-8" />
-              </Button>
-              <Button
-                size={"lg"}
-                variant={"ghost"}
-                onClick={() => swiperRef.current?.slideNext()}
-                className=" bg-gray-100 p-6 transition-colors hover:bg-gray-200"
-              >
-                <ArrowRight className="h-8 w-8" />
-              </Button>
-            </div>
-          </div>
         </div>
       </MaxWidthWrapper>
 
@@ -100,8 +81,9 @@ export function BrandAmbassadors() {
             {ambassadors.map((ambassador, i) => (
               <SwiperSlide className=" pb-6" key={i}>
                 <div className="grid grid-cols-1  lg:pb-0 pb-10 gap-8 md:grid-cols-2">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
+                  <div className="relative  h-[80vh] w-full overflow-hidden">
+                    <Image
+                      fill
                       src={ambassador.image || "/placeholder.svg"}
                       alt={ambassador.name}
                       className="h-full w-full object-cover"
@@ -111,8 +93,8 @@ export function BrandAmbassadors() {
                     <h3 className="specail border-b-2 border-input w-fit special mb-2 text-sm font-light tracking-[0.2em] text-gray-600">
                       {ambassador.role}
                     </h3>
-                    <h2 className="mb-4 text-2xl lg:text-4xl font-bold tracking-tight">{ambassador.name}</h2>
-                    <p className="text-base text-gray-600">{ambassador.description}</p>
+                    <h2 className="mb-4 text-2xl lg:text-5xl font-bold tracking-tight">{ambassador.name}</h2>
+                    <p className="text-base text-gray-900">{ambassador.description}</p>
                     <SkewedButton className="!w-fit mt-4">Learn more</SkewedButton>
                   </div>
                 </div>
