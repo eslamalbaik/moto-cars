@@ -24,7 +24,7 @@ export default function Home() {
       </MaxWidthWrapper>
       <section className=" bg-black">
         <MaxWidthWrapper noPadding className="flex relative lg:flex-row flex-col items-center">
-          <MaxWidthWrapper className="flex text-white flex-col gap-6">
+          <div className="flex text-white flex-col gap-6">
             <h3 className=" text-3xl lg:text-5xl font-bold">VMOTO APP</h3>
             <p>For those who seek a connection with the world around them</p>
             <div className="flex items-center gap-4">
@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
               </SkewedButton>
             </div>
-          </MaxWidthWrapper>
+          </div>
           <div className=" w-full h-[50vh] lg:h-[81vh] relative">
             <Image
               src={"/Frame-1121_2024-12-11-163328_ysfv.webp"}
