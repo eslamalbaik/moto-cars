@@ -50,7 +50,9 @@ export function ModelRange() {
   return (
     <section className="relative py-16">
       <MaxWidthWrapper noPadding className="flex flex-col">
-        <h2 className="specail mb-2 w-fit border-b border-input text-base font-light tracking-[0.2em]">MODEL RANGE</h2>
+        <div className="mb-4">
+        <span className="text-base nebula  border-b lowercase border-black pr-4">MODEL RANGE</span>
+        </div>
         <div className="flex items-center justify-between">
           {/* Mobile Select */}
           <div className="md:hidden w-[200px]">

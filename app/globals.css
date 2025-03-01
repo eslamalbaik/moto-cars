@@ -3,13 +3,48 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "MyFont";
-  src: url("/fonts/Metropolis-Medium.otf") format("otf");
+  font-family: 'Metropolis';
+  font-weight: 400; /* Regular */
   font-style: normal;
+  src: url('/fonts/Metropolis-Regular.woff') format('woff');
 }
-.special {
-  @apply font-[MyFont];
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  src: url('/fonts/Metropolis-Medium.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  src: url('/fonts/Metropolis-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  src: url('/fonts/Metropolis-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Nebula';
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  src: url('../public/fonts/Nebula-Regular-Patched.woff2') format('woff2');
+}
+.nebula{
+  font-family: "Nebula", sans-serif;
+
+}
+html,body
+{
+  font-family: 'Metropolis', sans-serif !important;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;

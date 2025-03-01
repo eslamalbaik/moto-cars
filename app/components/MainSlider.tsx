@@ -136,7 +136,7 @@ export function HeroSlider() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               <div className="absolute bottom-20 left-24 flex flex-col items-start justify-center px-4 text-center">
-                <h1 className="mb-8 text-2xl font-bold tracking-[0.2em] text-white sm:text-4xl">{slide.title}</h1>
+                {/* <h1 className="mb-8 text-2xl font-bold tracking-[0.2em] text-white sm:text-4xl">{slide.title}</h1> */}
                 <SkewedButton className="group font-semibold relative  special text-sm  text-black transition-transform hover:scale-105">
                   {slide.cta}
                 </SkewedButton>

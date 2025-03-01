@@ -73,32 +73,22 @@ const discover = [
 
 export function MainNav() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
-  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [open, setOpen] = React.useState(false);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolling(lastScrollPosition < window.scrollY);
-      setLastScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollPosition]);
-
   const pathname = usePathname();
-
   return (
-    <header
+      <div className="px-2 transition mt-2 md:mt-6 xl:mt-8 absolute top-0 inset-x-0 z-40  sm:px-6 w-full">
+        <div className="w-full max-w-screen-xl mx-auto">
+        <header
       className={cn(
-        "fixed left-1/2 dark -translate-x-1/2 top-10 z-50 max-w-7xl w-full bg-black/90 rounded-lg backdrop-blur-sm transition-all",
-        isScrolling ? "-translate-y-24" : "translate-y-0"
+        "w-full rounded-sm bg-black text-gray-100 shadow-md dark  transition-all",
+
       )}
     >
+      
       <div className="container flex h-20 justify-between items-center px-4">
         <Link href="/" className="w-44 h-44 relative">
-          <Image fill src="/logo.png" className="object-contain" alt="VMOTO" />
+          <Image fill src="/logo-2.webp" className="object-contain" alt="VMOTO" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -264,7 +254,9 @@ export function MainNav() {
           </div>
         </div>
       </div>
-    </header>
+    </header> 
+     </div>
+    </div>
   );
 }
 
@@ -276,7 +268,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
             )}
             {...props}
